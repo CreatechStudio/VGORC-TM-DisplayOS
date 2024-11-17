@@ -1,1 +1,1 @@
-http://localhost/FullPageDashboard
+http://YOUR_TM_URL/?division=Division%20A#schedule
