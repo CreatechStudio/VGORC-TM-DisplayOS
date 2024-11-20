@@ -34,11 +34,11 @@ apt-get remove -y --purge  $remove_extra
 apt-get autoremove -y
 
 #apt-get tools
-apt-get -y --force-yes install git screen checkinstall avahi-daemon libavahi-compat-libdnssd1 xterm xdotool vim expect feh
+apt-get -y --allow install git screen checkinstall avahi-daemon libavahi-compat-libdnssd1 xterm xdotool vim expect feh
 
 if [ "$FULLPAGEOS_INCLUDE_CHROMIUM" == "yes" ]
 then
-    apt-get install -y --force-yes chromium-browser
+    apt-get install -y --allow chromium-browser
     sed -i 's@%BROWSER_START_SCRIPT%@/opt/custompios/scripts/start_chromium_browser@g' /opt/custompios/scripts/run_onepageos
 fi
 
@@ -121,7 +121,7 @@ fi
 #Setup x11vnc
 if [ "$FULLPAGEOS_INCLUDE_X11VNC"  == "yes" ]
 then
-    apt-get install -y --force-yes x11vnc
+    apt-get install -y --allow x11vnc
 
     mkdir -p /opt/custompios/vnc
     chown "${BASE_USER}":"${BASE_USER}" /opt/custompios/vnc
