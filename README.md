@@ -4,6 +4,8 @@
 </a>
 </p>
 
+> Based on [FullPageOS by guysoft](https://github.com/guysoft/FullPageOS/issues/605)
+
 ## Usage
 
 1. Unzip the image and install it to an SD card like any other Raspberry Pi image
@@ -26,19 +28,13 @@ Get the URL from the `fullpageos.txt` file.
 
 Refresh Chromium by using `killall`.
 
-#### reload_fullpageos_txt
-
-Reload the `fullpageos.txt` file, then use `refresh` to change url without reboot.
-
 #### safe_refresh
 
 Refresh Chromium by emulating `F5` key.
 
 ### URL
 
-URL written in `fullpageos.txt` or `/boot/firmware/fullpageos.txt` in a single line, one URL each time.
-
-> Remember to use `sudo` to modify when you are in SSH.
+Set in the VGORC Tournament Manager - Admin - Display Settings - URL.
 
 All the variable name should be encoded in the URL.
 
@@ -49,29 +45,29 @@ All the variable name should be encoded in the URL.
 1. Qualification Ranking
 
 ```
-http://YOUR_TM_URL/?division={DIVISION_NAME}#qrank
+division={DIVISION_NAME}#qrank
 ```
 
 2. Elimination Ranking
 
 ```
-http://YOUR_TM_URL/?division={DIVISION_NAME}#erank
+division={DIVISION_NAME}#erank
 ```
 
 3. Skills Ranking
 
 ```
-http://YOUR_TM_URL/?#srank
+#srank
 ```
 
 #### Scheudle
 
 ```
-http://YOUR_TM_URL/?division={DIVISION_NAME}#schedule
+division={DIVISION_NAME}#schedule
 ```
 
 #### Match Timer
 
 ```
-http://YOUR_TM_URL/?displayMode=1&fieldName={FIELD_NAME}#score
+displayMode=1&fieldName={FIELD_NAME}#score
 ```
