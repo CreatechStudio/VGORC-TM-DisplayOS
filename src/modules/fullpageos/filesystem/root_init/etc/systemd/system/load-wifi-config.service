@@ -1,0 +1,11 @@
+[Unit]
+Description=Load WiFi config from /boot
+After=network-pre.target
+Before=NetworkManager.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/custompios/scripts/load_wifi.sh
+
+[Install]
+WantedBy=multi-user.target

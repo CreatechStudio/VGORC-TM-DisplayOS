@@ -161,6 +161,9 @@ then
     systemctl enable x11vnc.service
 fi
 
+chmod +x /opt/custompios/scripts/load_wifi.sh
+systemctl enable load-wifi-config.service
+
 #echo "sudo -u pi startx /opt/custompios/scripts/run_onepageos &" >> /etc/rc.local
 #echo "(sleep 15 ; sudo -u pi /opt/custompios/scripts/fullscreen) &" >> /etc/rc.local
 
