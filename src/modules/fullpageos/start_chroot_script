@@ -38,7 +38,8 @@ apt-get -y --force-yes install git screen checkinstall avahi-daemon libavahi-com
 
 if [ "$FULLPAGEOS_INCLUDE_CHROMIUM" == "yes" ]
 then
-    apt-get install -y --force-yes chromium-browser
+    wget https://archive.raspberrypi.org/debian/pool/main/c/chromium-browser/chromium-browser_113.0.5672.95-rpt1_arm64.deb
+    sudo apt install -y ./chromium-browser_113.0.5672.95-rpt1_arm64.deb
     sed -i 's@%BROWSER_START_SCRIPT%@/opt/custompios/scripts/start_chromium_browser@g' /opt/custompios/scripts/run_onepageos
 fi
 
